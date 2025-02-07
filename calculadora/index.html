@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora Grid</title>
+</head>
+<body>
+    <div class="calculadora">
+        <div class="display" id="DisplayValue">
+            
+        </div>
+        <div class="ButtonsContainer">
+            <input type="button" value="C" class="buttons OperatorLight" onclick="ClearDisplay()">
+            <input type="button" value="B" class="buttons OperatorLight" onclick="back()">
+            <input type="button" value="/" class="buttons Operator" onclick="insert('/')">
+            <input type="button" value="X" class="buttons Operator" onclick="insert('*')">
+            <input type="button" value="7" class="buttons" onclick="insert('7')">
+            <input type="button" value="8" class="buttons" onclick="insert('8')">
+            <input type="button" value="9" class="buttons" onclick="insert('9')">
+            <input type="button" value="-" class="buttons Operator" onclick="insert('-')">
+            <input type="button" value="4" class="buttons" onclick="insert('4')">
+            <input type="button" value="5" class="buttons" onclick="insert('5')">
+            <input type="button" value="6" class="buttons" onclick="insert('6')">
+            <input type="button" value="+" class="buttons Operator" onclick="insert('+')">
+            <input type="button" value="1" class="buttons" onclick="insert('1')">
+            <input type="button" value="2" class="buttons" onclick="insert('2')">
+            <input type="button" value="3" class="buttons" onclick="insert('3')">
+            <input type="button" value="=" class="buttons" onclick="calculate()" id="btn-equal">
+            <input type="button" value="0" class="buttons" onclick="insert('0')" id="btn-zero">
+            <input type="button" value="." class="buttons" onclick="insert('.')">
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

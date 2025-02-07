@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --fontFamily: "Poppins", serif;
+    --bodyBackground: #FFF;
+    --geralBackground: #f4f5f7;
+    --cardContainerBackground: #f0f0f0;
+    --cardBackground: #fafafa;
+    --titleColor: #182b4d;
+    --letterColor: #000;
+    --textColor: #4d5c76;
+    --scrollBarColor: #c0c0c0;
+    --toggleColor: #334155;
+}
+.dark:root{
+    --fontFamily: "Poppins", serif;
+    --bodyBackground: #202020;
+    --geralBackground: #303030;
+    --cardContainerBackground: #262626;
+    --cardBackground: #383838;
+    --titleColor: #fafafa;
+    --letterColor: #FFF;
+    --textColor: #e7e7e7;
+    --scrollBarColor: #3f3f46;
+    --toggleColor: #334155;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fontFamily);
+    transition: .2s;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--bodyBackground);
+}
+
+.geral-container{
+    position: relative;
+    height: 90vh;
+    width: 60vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--geralBackground);
+    border-radius: 10px;
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.493);
+    padding: 15px;
+    color: var(--letterColor);
+}
+.geral-container > h2{
+    padding: 10px;
+    color: var(--titleColor);
+}
+.plus-button{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 15px;
+    cursor: pointer;
+    font-size: 1.5rem; 
+}
+.toggleCheck{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 15px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.toggleCheck > .toggleTheme{
+    appearance: none;
+    width: 50px;
+    height: 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: .2s;
+    background-color: var(--bodyBackground);
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.466);
+    position: relative;
+    &:checked{
+        box-shadow: inset 0px 0px 15px rgba(0, 0, 0, 0.466); 
+        background-color: #60a5fa;
+    }
+    &::before{
+        content: '';
+        width: 50%;
+        height: 100%;
+        border-radius: 50%;
+        background-color: var(--toggleColor);
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: scale(0.8);
+        transition: .2s;
+    }
+    &:checked::before{
+        content: '';
+        width: 50%;
+        height: 100%;
+        border-radius: 50%;
+        background-color: var(--toggleColor);
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: scale(0.8);
+        transition: .2s;
+    }
+}
+
+.card-container{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: var(--cardContainerBackground);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.24);
+    width: 90%;
+    height: 80%;
+    border-radius: 8px;
+    padding: 10px;
+    overflow-y: scroll;
+    &::-webkit-scrollbar{
+        background-color: transparent;
+        width: 10px;
+    }
+    &::-webkit-scrollbar-thumb{
+        background-color: var(--scrollBarColor);
+        border-radius: 8px;
+    }
+}
+.card{
+    width: 100%;
+    min-height: 70px;
+    max-height: 120px;
+    background-color: var(--cardBackground);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.356);
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.text-content{
+    padding: 15px;
+    display: block;
+    flex-grow: 2;
+    max-width: 90%;
+    min-height: 100%;
+    overflow-y: scroll;
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: var(--textColor);
+    outline: none;
+    &:focus{
+        outline-style: solid;
+        outline-width: .5px;
+        outline-color: gray;
+        border-radius: 10px;
+    }
+    &::-webkit-scrollbar{
+        display: none;
+    }
+
+}
+.options-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-direction: row;
+}
+.option{
+    cursor: pointer;
+}
+
+@media (max-width: 768px){
+    .geral-container{
+        width: 90vw;
+    }
+}
+@media (max-width: 425px){
+    .geral-container{
+        height: 100vh;
+        width: 100vw;
+        padding: 5px;
+        border-radius: 0px;
+    }
+    .card-container{
+        width: 100%;
+    }
+}
+
+

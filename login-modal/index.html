@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Login-Modal</title>
+</head>
+<body>
+    <button class="open-modal" data-modal="login-modal">
+        <i class="bi bi-body-text"></i>
+    </button>
+
+    <dialog id="login-modal" class="modal-form">
+        <header class="form-header">
+
+            <div class="button-container">
+                <button class="close-modal" data-modal="login-modal">
+                    <i class="bi bi-x-lg"></i>
+                </button>
+            </div>
+
+            <h1>Login</h1>
+        </header>
+        <main>
+            <div class="input-box">
+                <label for="name">Nome</label>
+                <input
+                type="text"
+                name="name"
+                id="input-name"
+                class="input-field"
+                placeholder="Insira seu nome..."
+                >
+            </div>
+
+            <div class="input-box">
+                <label for="email">Email</label>
+                <input
+                type="text"
+                name="email"
+                id="input-email"
+                class="input-field"
+                placeholder="nome@gmail.com..."
+                >
+            </div>
+
+            <div class="input-box">
+                <label for="password">Senha</label>
+                <input
+                type="text"
+                name="password"
+                id="input-password"
+                class="input-field"
+                placeholder="Senha..."
+                >
+            </div>
+
+            <div class="options-box">
+                <button id="submit-button">
+                    Logar
+                </button>
+
+                <div class="theme-box">
+                    <input type="checkbox" name="themeToggle" id="themeToggle" class="toggleCheck">
+                    <label for="themeToggle" id="themeLabel">Dark Theme</label>
+                </div>
+            </div>
+
+        </main>
+    </dialog>
+    <script src="app.js"></script>
+</body>
+</html>

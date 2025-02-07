@@ -1,0 +1,15 @@
+Casa= <i class="bi bi-house-door"></i>
+Casa fill= <i class="bi bi-house-door-fill"></i>
+
+Dashboard= <i class="bi bi-grid-1x2"></i>
+Dashboard fill= <i class="bi bi-grid-1x2-fill"></i>
+
+Agenda= <i class="bi bi-calendar-date"></i>
+Agenda fill= <i class="bi bi-calendar-date-fill"></i>
+
+Config= <i class="bi bi-gear"></i>
+Config fill= <i class="bi bi-gear-fill"></i>
+
+Conta= <i class="bi bi-person-circle"></i>
+
+Menu= <i class="bi bi-list" id="button"></i>

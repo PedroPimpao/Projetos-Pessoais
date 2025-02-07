@@ -1,0 +1,199 @@
+:root{
+    --navMaxWidth: 100vw;
+    --navMinWidth: 0px;
+}
+
+.container{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: var(--navMinWidth) 1fr;
+}
+
+nav.navigationBar{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    overflow: hidden;
+    position: fixed;
+}
+
+.navList{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+main.mainContent{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    overflow: hidden;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+
+.button{
+    display: block;
+}
+
+#phoneMainButton{
+    display: block;
+}
+#phoneNavButton{
+    display: block;
+}
+#deskButton{
+    display: none;
+}
+
+.navOpen{
+    grid-template-columns: var(--navMaxWidth) 0px;
+}
+.navClose{
+    grid-template-columns: var(--navMinWidth) 1fr;
+}
+.open{
+    width: var(--navMaxWidth);
+}
+.close{
+    width: var(--navMinWidth);
+}
+
+.showMain{
+    min-width: 100vw;
+}
+.ocultMain{
+    width: 0px;
+}
+
+@media (min-width: 597px){
+    :root{
+        --navMaxWidth: 200px;
+        --navMinWidth: 50px;
+    }
+    .container{
+        display: grid;
+        grid-template-columns: var(--navMinWidth) 1fr;
+    }
+    nav.navigationBar{
+        display: block;
+        grid-column: 1/2;
+        overflow: hidden;
+        position: fixed;
+    }
+    main.mainContent{
+        display: block;
+        grid-column: 2/-1;
+        overflow: hidden;
+    }
+    #deskButton{
+        display: block;
+    }
+    #phoneNavButton{
+        display: none;
+    }
+    #phoneMainButton{
+        display: none;
+    }
+    .navOpen{
+        grid-template-columns: var(--navMaxWidth) 1fr;
+    }
+
+    .open{
+        width: var(--navMaxWidth);
+    }
+    .close{
+        width: var(--navMinWidth);
+    }
+}
+
+@media (min-width: 768px){
+    :root{
+        --navMaxWidth: 250px;
+        --navMinWidth: 50px;
+    }
+    .container{
+        display: grid;
+        grid-template-columns: var(--navMinWidth) 1fr;
+    }
+    nav.navigationBar{
+        display: block;
+        grid-column: 1/2;
+        overflow: hidden;
+        position: fixed;
+    }
+    main.mainContent{
+        display: block;
+        grid-column: 2/-1;
+        overflow: hidden;
+    }
+    #deskButton{
+        display: block;
+    }
+    #phoneNavButton{
+        display: none;
+    }
+    #phoneMainButton{
+        display: none;
+    }
+    .navOpen{
+        grid-template-columns: var(--navMaxWidth) 1fr;
+    }
+
+    .open{
+        width: var(--navMaxWidth);
+    }
+    .close{
+        width: var(--navMinWidth);
+    }
+}
+
+@media (min-width: 1024px){
+    :root{
+        --navMaxWidth: 300px;
+        --navMinWidth: 50px;
+    }
+    .container{
+        display: grid;
+        grid-template-columns: var(--navMinWidth) 1fr;
+    }
+    nav.navigationBar{
+        display: block;
+        grid-column: 1/2;
+        overflow: hidden;
+        position: fixed;
+    }
+    main.mainContent{
+        display: block;
+        grid-column: 2/-1;
+        overflow: hidden;
+    }
+    #buttonDesk{
+        display: block;
+    }
+    #buttonPhoneNav{
+        display: none;
+    }
+    #buttonPhoneMain{
+        display: none;
+    }
+    .navOpen{
+        grid-template-columns: var(--navMaxWidth) 1fr;
+    }
+
+    .open{
+        width: var(--navMaxWidth);
+    }
+    .close{
+        width: var(--navMinWidth);
+    }
+}

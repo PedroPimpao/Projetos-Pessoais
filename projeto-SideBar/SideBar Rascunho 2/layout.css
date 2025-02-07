@@ -1,0 +1,111 @@
+body{
+    min-height: 1000vh;
+    background: var(--backgroundColor);
+}
+.nav-list,.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+}
+
+@media (max-width: 500px){
+    .container{
+        display: block;
+    }
+    .desktop-menu{
+        display: none;
+    }
+    .mobile-menu{
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+    }
+    .main-content{
+        display: block;
+        height: 100vh;
+    }
+    #Main-mobile-menu-btn{
+        display: block;
+    }
+    .showMenu{
+        display: block;
+    }
+}
+@media (min-width: 501px){
+    :root{
+        --MaxWidth: 200px;
+        --MinWidth: 50px;
+    }
+    .container{
+        display: grid;
+        grid-template-columns: var(--MinWidth) 1fr;
+        height: 100vh;
+        transition:.3s linear;
+    }
+    .open{
+        grid-template-columns: var(--MaxWidth) 1fr;
+    }
+    #Main-mobile-menu-btn{
+        display: none;
+    }
+    .mobile-menu{
+        display: none;
+    }
+    .desktop-menu{
+        display: block;
+        grid-column: 1/2;
+        height: 100vh;
+        position: fixed;
+        width: var(--MinWidth);
+        overflow: hidden;
+    }
+    .desktop-menu.open{
+        width: var(--MaxWidth);
+    }
+    .main-content{
+        display: block;
+        grid-column: 2/-1;
+    }
+}
+
+@media (min-width: 1024px){
+    :root{
+        --MaxWidth: 300px;
+        --MinWidth: 50px;
+    }
+    .container{
+        display: grid;
+        grid-template-columns: var(--MinWidth) 1fr;
+        height: 100vh;
+        transition: .3s linear;
+    }
+    .open{
+        grid-template-columns: var(--MaxWidth) 1fr;
+    }
+    #Main-mobile-menu-btn{
+        display: none;
+    }
+    .mobile-menu{
+        display: none;
+    }
+    .desktop-menu{
+        display: block;
+        grid-column: 1/2;
+        height: 100vh;
+        position: fixed;
+        width: var(--MinWidth);
+        overflow: hidden;
+    }
+    .desktop-menu.open{
+        width: var(--MaxWidth);
+    }
+    .main-content{
+        display: block;
+        grid-column: 2/-1;
+    }
+}

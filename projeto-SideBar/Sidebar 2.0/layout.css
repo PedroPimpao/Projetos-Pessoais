@@ -1,0 +1,27 @@
+:root{
+    --sideBarMaxWidth: 300px;
+    --sideBarMinWidth: 50px;
+}
+.grid-wrapper{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: var(--sideBarMaxWidth) 1fr;
+    transition:.5s ease;
+}
+nav.sidebar{
+    grid-column: 1/2;
+}
+
+main{
+    grid-column: 2/-1;
+    
+}
+
+.pageContent{
+    display: none;
+}
+
+.showContent{
+    display: flex;
+}
+

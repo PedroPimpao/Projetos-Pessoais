@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>SideBar 2</title>
+</head>
+<body>
+    <div class="grid-wrapper">
+        <nav class="sidebar ">
+            <div class="btn-SizeToggle">
+                <i class="bi bi-list" id="button"></i>
+            </div>
+            <ul>
+                <li class="itemMenu ativo"> 
+                    <a href="#">
+                        <span class="icon"><i id="homeId" class="bi bi-house-door-fill"></i></span>
+                        <span class="txt-link">Home</span>
+                    </a>
+                </li>
+                <li class="itemMenu">
+                    <a href="#">
+                        <span class="icon"><i id="dashId" class="bi bi-grid-1x2"></i></span>
+                        <span class="txt-link">Dashboard</span>
+                    </a>
+                </li>
+                <li class="itemMenu">
+                    <a href="#">
+                        <span class="icon"><i id="calendarId" class="bi bi-calendar-date"></i></span>
+                        <span class="txt-link">Agenda</span>
+                    </a>
+                </li>
+                <li class="itemMenu">
+                    <a href="#">
+                        <span class="icon"><i id="settingsId" class="bi bi-gear"></i></span>
+                        <span class="txt-link">Configurações</span>
+                    </a>
+                </li>
+                <li class="itemMenu">
+                    <a href="#">
+                        <span class="icon"><i id="accountId" class="bi bi-person-circle"></i></span>
+                        <span class="txt-link">Conta</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <main class="pageContent showContent">
+            <p>Home</p>
+        </main>
+        <main class="pageContent">
+            <p>Dashboard</p>
+        </main>
+        <main class="pageContent">
+            <p>Agenda</p>
+        </main>
+        <main class="pageContent">
+            <p>Configurações</p>
+        </main>
+        <main class="pageContent">
+            <p>Conta</p>
+        </main>
+    </div>
+
+    <script src="navbar.js"></script>    
+</body>
+</html>

@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --fontFamily: "Poppins", sans-serif;
+    --bodyBackground: #FFF;
+    --formBackground: #fafafa;
+    --secondary: #d114d1;
+    --openButtonHover: #7a157a;
+    --color: #000;
+    --colorSecondary: #fafafa;
+}
+.dark:root{
+    --bodyBackground: #202020;
+    --formBackground: #303030;
+    --secondary: #d114d1;
+    --color: #fafafa;
+    --colorSecondary: #202020;
+
+}
+*{
+    transition: .2s;
+}
+*:not(dialog){
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fontFamily);
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bodyBackground);
+    /* color: var(--color); */
+    /* position: relative; */
+}
+
+.open-modal{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--secondary);
+    border: 0;
+    font-size: 28px;
+    color: var(--color);
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0px 0px 9px #0000008f;
+    color: var(--colorSecondary);
+    &:hover{
+        background-color: var(--openButtonHover);
+        box-shadow: 0px 0px 15px #000000bb;
+    }
+    &:active{
+    box-shadow: 0px 0px 18px #000000bb;
+    }
+}
+
+.modal-form{
+    /* padding: 0; */
+    font-family: var(--fontFamily);
+    background-color: var(--formBackground);
+    width: 500px;
+    height: 500px;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.596);
+}
+
+.form-header{
+    background-color: var(--secondary);
+    margin: -16px -16px;
+}
+
+.form-header > .button-container{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    padding: 5px;
+}
+.button-container > .close-modal{
+    background-color: transparent;
+    border: 0;
+    color: var(--color);
+    font-size: 21px;
+    cursor: pointer;
+}
+
+.form-header > h1{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    color: #FFF;
+}
+
+.modal-form > main {
+    margin-top: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: var(--color);
+}
+
+.input-box{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.input-field{
+    padding: 10px;
+    border: 1px solid #808080;
+    border-radius: 5px;
+    outline: none;
+    background-color: var(--formBackground);
+    box-shadow: inset 0px 0px 5px #0000005d;
+    &:focus{
+        box-shadow: inset 0px 0px 9px #0000005d;
+    }
+}
+
+#submit-button{
+    /* margin-top: 20px; */
+    padding: 10px;
+    border-radius: 5px;
+    color: var(--color);
+    font-weight: bold;
+    background-color: var(--secondary);
+    border: 0;
+    box-shadow: 0px 0px 8px #00000081;
+    width: 50%;
+    cursor: pointer;
+    color: #FFF;
+    &:hover{
+        background-color: var(--openButtonHover);
+    }
+    &:active{
+        box-shadow: 0px 0px 16px #00000081;
+    }
+}
+
+.options-box{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-top: 20px;
+
+}
+.theme-box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    /* margin-top: 20px; */
+}
+
+.toggleCheck{
+    appearance: none;
+    width: 50px;
+    height: 25px;
+    background-color: var(--formBackground);
+    border-radius: 50px;
+    border: 0;
+    box-shadow: inset 0px 0px 8px #0000007a;
+    position: relative;
+    transition: .5s;
+    &:checked{
+        background-color: var(--secondary);
+        box-shadow: inset 0px 0px 10px #0000009a;
+        transition: .5s;
+    }
+    &::before{
+        content: '';
+        width: 50%;
+        height: 100%;
+        border-radius: 50%;
+        background-color: var(--secondary);
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: .5s;
+        transform: scale(0.8);
+    }
+    &:checked::before{
+        content: '';
+        width: 50%;
+        height: 100%;
+        border-radius: 50%;
+        background-color: var(--openButtonHover);
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transition: .5s;
+    }
+}
