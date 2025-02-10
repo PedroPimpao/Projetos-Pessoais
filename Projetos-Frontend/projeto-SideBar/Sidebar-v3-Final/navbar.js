@@ -11,15 +11,7 @@ clickableItems.forEach((item)=>{
     })
 })
 
-// mobileMenuMain.addEventListener('click',()=>{
-//     navbar.classList.toggle('close')
-// })
-// menuButtonMobile.addEventListener('click',()=>{
-//     navbar.classList.toggle('close')
-// })
-// menuButtonDesk.addEventListener('click',()=>{
-//     navbar.classList.toggle('close')
-// })
+
 
 //Select itens and contents
 const itemMenu=document.querySelectorAll('.itemMenu')
@@ -34,9 +26,7 @@ function selectItem(){
     selectContent(index)
 }
 
-// itemMenu.forEach((item)=>{
-//     item.addEventListener('click',selectItem)
-// })
+
 
 function selectContent(index){
     pageContent.forEach((item)=>{
