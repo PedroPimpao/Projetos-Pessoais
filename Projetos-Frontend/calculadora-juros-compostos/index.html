@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Juros Compostos</title>
+</head>
+<body>
+    <div class="main">
+        <header class="main-header">
+            <h1 class="main-title">Juros Compostos</h1>
+            <div class="options-container">
+                <div id="montante" class="option ativo">
+                    Montante
+                </div>
+                <div id="capital" class="option">
+                    Capital
+                </div>
+                <div id="tempo" class="option">
+                    Tempo
+                </div>
+            </div>
+        </header>
+
+        <div id="calc-montante" class="calc-content showContent">
+            <div class="calc-header">
+                <h2>Montante</h2>
+            </div>
+            <div class="calc">
+                <div class="input-box">
+                    <label for="id-capital-montante">Capital: </label>
+                    <input 
+                    type="text" 
+                    id="id-capital-montante" 
+                    class="input-field"
+                    placeholder="R$0,00"
+                    >
+                </div>
+                <div class="input-box">
+                    <label for="id-tempo-montante">Tempo (Em meses): </label>
+                    <input 
+                    type="text" 
+                    id="id-tempo-montante" 
+                    class="input-field"
+                    placeholder="00"
+                    >
+                </div>
+                <div class="input-box">
+                    <label for="id-taxa-montante">Taxa(a.a%): </label>
+                    <input 
+                    type="text" 
+                    id="id-taxa-montante" 
+                    class="input-field"
+                    placeholder="0,00%"
+                    >
+                </div>
+            </div>
+            <div class="calc-footer">
+                <button class="calcButton" id="calcular-montante">Calcular</button>
+                <div class="divResultado" id="resultado-montante">Resultado</div>
+            </div>
+        </div>
+
+        <div id="calc-capital" class="calc-content">
+            <div class="calc-header">
+                <h2>Capital</h2>
+            </div>
+            <div class="calc">
+                <div class="input-box">
+                    <label for="id-montante-capital">Montante: </label>
+                    <input 
+                    type="text" 
+                    id="id-montante-capital" 
+                    class="input-field"
+                    placeholder="R$0,00"
+                    >
+                </div>
+                <div class="input-box">
+                    <label for="id-tempo-capital">Tempo (Em meses): </label>
+                    <input 
+                    type="text" 
+                    id="id-tempo-capital" 
+                    class="input-field"
+                    placeholder="00"
+                    >
+                </div>
+                <div class="input-box">
+                    <label for="id-taxa-capital">Taxa(a.a%): </label>
+                    <input 
+                    type="text" 
+                    id="id-taxa-capital" 
+                    class="input-field"
+                    placeholder="0,00%"
+                    >
+                </div>
+            </div>
+            <div class="calc-footer">
+                <button class="calcButton" id="calcular-capital">Calcular</button>
+                <div class="divResultado" id="resultado-capital">Resultado</div>
+            </div>
+        </div>
+
+        <div id="calc-tempo" class="calc-content">
+            <div class="calc-header">
+                <h2>Tempo</h2>
+            </div>
+            <div class="calc">
+                <div class="input-box">
+                    <label for="id-capital-tempo">Capital: </label>
+                    <input 
+                    type="text" 
+                    id="id-capital-tempo" 
+                    class="input-field"
+                    placeholder="R$0,00"
+                    >
+                </div>
+                <div class="input-box">
+                    <label for="id-montante-tempo">Montante: </label>
+                    <input 
+                    type="text" 
+                    id="id-montante-tempo" 
+                    class="input-field"
+                    placeholder="R$0,00"
+                    >
+                </div>
+                <div class="input-box">
+                    <label for="id-taxa-tempo">Taxa(a.a%): </label>
+                    <input 
+                    type="text" 
+                    id="id-taxa-tempo" 
+                    class="input-field"
+                    placeholder="0,00%"
+                    >
+                </div>
+            </div>
+            <div class="calc-footer">
+                <button class="calcButton" id="calcular-tempo">Calcular</button>
+                <div class="divResultado" id="resultado-tempo">Resultado</div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="javascript/script.js"></script>
+</body>
+</html>

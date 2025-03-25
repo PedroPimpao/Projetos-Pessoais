@@ -1,0 +1,297 @@
+:root{
+    --fontFamily: "Roboto", sans-serif;
+    --background: #202020;
+    --background2: #303030;
+    --fontColor: #fafafa;
+    --buttonFontColor: #fafafa;
+    --mainColor: #6c63ff;
+    --mainColorActive: #423d94;
+    --borderColor: #c0c0c0;
+    --inputFocus: #444444;
+    --inputBackgoundError: #b306007e;
+    --errorColor: #d10404;
+    --checkColor: #adff2f;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fontFamily);
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background);
+}
+
+.container{
+    height: 90vh;
+    width: 80%;
+    display: flex;    
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.363);
+    /* padding: 15px; */
+}
+
+.imagem{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background-color: burlywood;
+}
+
+.imagem img{
+    width: 29rem;
+}
+
+.form-body, .login-body{
+    width: 100%;
+    background-color: var(--background2);
+}
+.login-body{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+
+}
+.form{
+    display: flex;
+    flex-direction: column;
+}
+.form-header{
+    color: var(--fontColor);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px;
+    position: relative;
+}
+
+.form-header h1::after{
+    content: '';
+    display: block;
+    width: 7rem;
+    background-color: var(--mainColor);
+    height: 5px;
+    border-radius: 10px;
+    margin: 0 auto;
+    position: absolute;
+}
+
+#login-button{
+    padding: 10px;
+    border: 0;
+    border-radius: 5px;
+    color: var(--buttonFontColor);
+    background-color: var(--mainColor);
+    font-size: large;
+    cursor: pointer;
+    transition: .3s;
+}
+#login-button:active{
+    background-color: var(--mainColorActive);
+}
+
+.input-group{
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 80px);
+    gap: 1em;
+}
+.input-group label{
+    color: var(--fontColor);
+}
+
+.input-box{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 5px;
+}
+
+
+.input-field, .input-eye{
+    color: var(--fontColor);
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.425);
+    border: 1px solid transparent;
+    background-color: transparent;
+    font-size: medium;
+    outline: none;
+    transition: .3s;
+}
+
+.input-field:focus, .input-eye:focus-within{
+    border: 1px solid var(--borderColor);
+    background-color: var(--inputFocus);
+}
+
+.input-field-pass{
+    border: 0;
+    background-color: transparent;
+    outline: none;
+    font-size: medium;
+    color: var(--fontColor);
+}
+
+.input-eye{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.input-eye i{
+    cursor: pointer;
+    color: var(--fontColor);
+}
+
+.submitButton-container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+}
+
+.submitButton{
+    width: 60%;
+    padding: 10px;
+    border: 0;
+    border-radius: 5px;
+    color: var(--buttonFontColor);
+    background-color: var(--mainColor);
+    font-size: large;
+    cursor: pointer;
+    transition: .3s;
+}
+.submitButton:hover{
+    transform: scale(1.05);
+}
+.submitButton:active{
+    background-color: var(--mainColorActive);
+}
+
+.lista-validacoes{
+    margin-left: 30px;
+}
+.lista-validacoes *{
+    color: #c0c0c0;
+}
+.lista-validacoes li{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+}
+.lista-validacoes li i{
+    margin-right: 15px;
+}
+
+.validacao-container{
+    overflow-y: scroll;
+    height: 120px;
+}
+
+.validacao-container::-webkit-scrollbar{
+    background-color: transparent;
+    width: 10px;
+}
+.validacao-container::-webkit-scrollbar-thumb{
+    background-color: #c0c0c0;
+    border-radius: 15px;
+    width: 10px;
+}
+
+.login-header{
+    background-color: var(--mainColor);
+    color: var(--fontColor);
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.login{
+    color: var(--fontColor);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 5px;
+    margin: 45px;
+    border-radius: 15px;
+    height: 60%;
+    width: 65%;
+    border: 2px solid var(--mainColor);
+    padding-top: 15px;
+}
+.login-input-field, .input-login-pass{
+    color: var(--fontColor);
+    font-size: medium;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0px 0px 10px #00000075;
+    border: 1px solid var(--borderColor);
+    outline: none;
+    background-color: transparent;
+    transition: .3s;
+}
+
+.login-input-field:focus{
+    background-color: var(--inputFocus);
+}
+
+#login-email-box, #login-password-box{
+    width: 95%;
+}
+
+.buttonsContainer{
+    display: flex;
+    flex-direction: row;
+    /* gap: 30px; */
+    justify-content: space-around;
+    margin-top: 30px;
+    width: 100%;
+}
+.login-buttons{
+    border: 0;
+    outline: none;
+    background-color: var(--mainColor);
+    font-size: large;
+    color: var(--fontColor);
+    padding: 10px;
+    border-radius: 5px;
+    min-width: 100px;
+    cursor: pointer;
+    transition: .3s;
+}
+.login-buttons:hover{
+    transform: scale(1.05);
+}
+.login-buttons:active{
+    background-color: var(--mainColorActive);
+}
+.input-error{
+    background-color: var(--inputBackgoundError);
+    border: 1px solid var(--errorColor);
+}
+
+.error_msg{
+    color: var(--errorColor);
+    font-size: small;
+    display: none;
+}
+
+.check{
+    color: var(--checkColor);
+}
+.error{
+    color: var(--errorColor);
+}

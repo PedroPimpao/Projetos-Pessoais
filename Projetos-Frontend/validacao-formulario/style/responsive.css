@@ -1,0 +1,67 @@
+@media (max-width: 1024px){
+    .container{
+        height: 100vh;
+    }
+    .validacao-container{
+        overflow-y: visible;
+    }
+}
+
+@media (max-width: 900px){
+    .container{
+        height: 100vh;
+        width: 100%;
+    }
+    .imagem{
+        display: none;
+    }
+}
+
+@media (min-height: 800px){
+    .input-group{
+        grid-template-rows: repeat(4, 140px);
+    }
+    .login{
+        gap: 40px;
+    }
+    .input-field, .input-eye{
+        font-size: large;
+    }
+}
+
+@media (max-width: 460px){
+    .input-group{
+        display: flex;
+        flex-direction: column;
+    }
+    .form-body{
+        overflow-y: scroll;
+    }
+    .form-body::-webkit-scrollbar{
+        background-color: transparent;
+        width: 5px;
+    }
+    .form-body::-webkit-scrollbar-thumb{
+        background-color: #c0c0c0;
+    }
+    .login{
+        height: 90%;
+        width: 95%;
+    }
+    .buttonsContainer{
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+    .login-buttons{
+        width: 250px;
+        margin: auto;
+    }
+}
+
+@media (min-width: 1440px){
+    .imagem img{
+        width: 40rem;
+    }
+}

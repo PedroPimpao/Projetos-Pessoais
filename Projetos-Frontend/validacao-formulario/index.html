@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/responsive.css">
+    <title>Formulário</title>
+</head>
+<body>
+    <div class="container">
+        <div class="imagem">
+            <img src="images/undraw_advanced-customization_7ms4.svg" alt="imagem">
+        </div>
+        <div class="form-body">
+            <div action="" class="form">
+                <div class="form-header">
+                    <div class="title">
+                        <h1>Cadastre-se</h1>
+                    </div>
+                    <div class="login-button-container">
+                        <button id="login-button">Entrar</button>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <div class="input-box">
+                        <label for="input-name"><strong>Nome: </strong></label>
+                        <input 
+                        type="text" 
+                        id="input-name"
+                        class="input-field" 
+                        name="inputname" 
+                        placeholder="Insira seu nome..."
+                        >
+                        <a class="error_msg">Mensagem de erro</a>
+                    </div>
+                    <div class="input-box">
+                        <label for="input-email"><strong>Email: </strong></label>
+                        <input 
+                        type="text" 
+                        id="input-email"
+                        class="input-field" 
+                        name="inputemail" 
+                        placeholder="exemplo@gmail.com"
+                        >
+                        <a class="error_msg">Mensagem de erro</a>
+                    </div>
+                    <div class="input-box">
+                        <label for="input-phone"><strong>Telefone: </strong></label>
+                        <input 
+                        type="text" 
+                        id="input-phone"
+                        class="input-field" 
+                        name="inputphone" 
+                        placeholder="(xx) xxxxx-xxxx"
+                        >
+                        <a class="error_msg">Mensagem de erro</a>
+                    </div>
+                    <div class="input-box">
+                        <label for="input-cpf"><strong>CPF: </strong></label>
+                        <input 
+                        type="text" 
+                        id="input-cpf"
+                        class="input-field" 
+                        name="inputcpf" 
+                        placeholder="xxx.xxx.xxx-xx"
+                        >
+                        <a class="error_msg">Mensagem de erro</a>
+                    </div>
+                    <div class="input-box">
+                        <label for="input-password"><strong>Senha: </strong></label>
+                        <div id="input-password-box" class="input-field input-eye">
+                            <input
+                            type="password"
+                            id="input-password"
+                            class="input-field-pass"
+                            name="inputpassword"
+                            placeholder="xxxxxxxxx"
+                            >
+                            <i id="eye-pass" class="eye-icon bi bi-eye"></i>
+                        </div>
+                        <a class="error_msg">Mensagem de erro</a>
+                    </div>
+                    <div class="input-box">
+                        <label for="input-confirm-password"><strong>Confirme a senha: </strong></label>
+                        <div class="input-eye">
+                            <input
+                            type="password"
+                            id="input-confirm-password"
+                            class="input-field-pass"
+                            name="inputconfirmpassword"
+                            placeholder="xxxxxxxxx"
+                            >
+                            <i id="eye-confirm-pass" class="eye-icon bi bi-eye"></i>
+                        </div>
+                        <a class="error_msg">Mensagem de erro</a>
+                    </div>
+                    <div id="validacao-container" class="validacao-container">
+                        <ul class="lista-validacoes">
+                            <li class="minusc error">
+                                <i id="valid-minusc check" class="validCheck bi bi-x-lg"></i>
+                                <div>Letras minusculas</div>
+                            </li>
+                            <li class="maiusc">
+                                <i id="valid-maiusc" class="validCheck bi bi-x-lg"></i>
+                                <div>Letras maiusculas</div>
+                            </li>
+                            <li class="numeros">
+                                <i id="valid-number" class="validCheck bi bi-x-lg"></i>
+                                <div>Números</div>
+                            </li>
+                            <li class="especiais">
+                                <i id="valid-especial" class="validCheck bi bi-x-lg"></i>
+                                <div>Caracteres especiais</div>
+                            </li>
+                            <li class="comprimento">
+                                <i id="valid-length" class="validCheck bi bi-x-lg"></i>
+                                <div>Minimo de 8 caracteres</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="submitButton-container">
+                        <button id="submitButton" class="submitButton">Cadastrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="login-body">
+            <header class="login-header">
+                <h1>Login</h1>
+            </header>
+            <div class="login">
+                <div id="login-email-box" class="input-box">
+                    <label for="login-email"><strong>Email: </strong></label>
+                    <input 
+                    type="text" 
+                    id="login-email" 
+                    class="login-input-field" 
+                    placeholder="exemplo@gmail.com"
+                    >
+                    <a class="error_msg">Mensagem de erro</a>
+                </div>
+                <div id="login-password-box" class="input-box">
+                    <label for=""><strong>Senha: </strong></label>
+                    <div class="input-eye input-login-pass">
+                        <input
+                        type="password"
+                        id="login-password"
+                        class="input-field-pass"
+                        placeholder="xxxxxxxx"
+                        >
+                        <i id="eye-login-pass" class="eye-icon bi bi-eye"></i>
+                    </div>
+                    <a class="error_msg">Mensagem de erro</a>
+                </div>
+                <div class="buttonsContainer">
+                    <div class="submitLoginContainer">
+                        <button id="submitLogin" class="login-buttons">
+                            Confirmar
+                        </button>
+                    </div>
+                    <div class="cadButtonContainer">
+                        <button id="cad-button" class="login-buttons">
+                            Cadastre-se
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="javascript/script.js"></script>
+</body>
+</html>
