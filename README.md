@@ -18,8 +18,11 @@
 ### Lista de tarefas KanBan
  https://pedropimpao.github.io/Projetos-Pessoais/Projetos-Frontend/kanban-dragDrop/
 
+### Calculadora de Juros Compostos
+ https://pedropimpao.github.io/Projetos-Pessoais/Projetos-Frontend/calculadora-juros-compostos/
 
-
+### Validação de Formulário
+ https://pedropimpao.github.io/Projetos-Pessoais/Projetos-Frontend/validacao-formulario/
 
 ## Projetos Backend
  ### Em breve...
